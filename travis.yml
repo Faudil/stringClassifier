@@ -1,0 +1,3 @@
+sudo: required
+language: python3
+script: ./tests.py

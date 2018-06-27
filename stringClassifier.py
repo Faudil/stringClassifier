@@ -25,6 +25,7 @@ class Pivot():
             else:
                 res[1].append(elem)
         return res
+
     def repartition(self, array):
         nbP = 0
         nbN = 0
@@ -77,6 +78,10 @@ def classify(array, maxElemInGrp):
     else:
         print("No pivot founded in dataset for array :", array)
 
-maxElemInGrp = int(sys.argv[1])
-array = sys.argv[2:]
-classify(array, maxElemInGrp)
+def main(args):
+    maxElemInGrp = int(args[0])
+    array = args[1:]
+    classify(array, maxElemInGrp)
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
